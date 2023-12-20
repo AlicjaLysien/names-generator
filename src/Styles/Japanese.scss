@@ -1,0 +1,26 @@
+@import "./variables";
+@import "./mixins";
+
+.Japanese {
+    @include background;
+    background-image: url("../../public/images/japanese-bg.jpg");
+    color: $japanese-color-matterborn;
+    main {
+        @include window;
+        background-color: $japanese-color-scorpion-transparency;
+        div {
+            @include container-names;
+            div {
+                @include names;
+                background-color: $japanese-color-colar-reef-transparency;
+            }
+        }
+        button {
+            @include button;
+            background-image: $japanese-color-button;
+            &:hover {
+                background-image: $japanese-color-button-hover;
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+@import "./variables";
+
+.Main {
+  background: $main-page-bg;
+  height: 100vh;
+  width: 100vw;
+  h1, h4 {
+    color: $main-page-white;
+  }
+  h1 {
+    font-size: $font-size-large;
+  }
+  h4 {
+    font-size: $font-size-medium;
+  }
+  button {
+    color: $main-page-button-text;
+    background-image: $main-page-button-bg;
+    font-size: $font-size-medium;
+    &:hover {
+      background-image: $main-page-button-hover;
+    }
+  }
+}

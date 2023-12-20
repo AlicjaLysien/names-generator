@@ -1,22 +1,27 @@
-import "./App.css";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import {useEffect} from "react";
+import {useDispatch} from "react-redux";
+import {generateNames} from "./Store/generator";
+import Generator from "./Pages/Generator";
+import Main from "./Pages/Main";
+import NotFound from "./Pages/NotFound";
 
 function App() {
+	const dispatch = useDispatch();
+	useEffect(() => {
+		dispatch(generateNames({genre: "fantasy"}));
+		dispatch(generateNames({genre: "japanese"}));
+		//return () => {dispatch(cleanDetails())}
+	}, []);
+	
 	return (
-		<div className="App">
-			<header className="App-header">
-				<p>
-          Edit <code>src/App.tsx</code> and save to reload.
-				</p>
-				<a
-					className="App-link"
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-          Learn React
-				</a>
-			</header>
-		</div>
+		<Router>
+			<Routes>
+				<Route path="/" element={<Main />} />
+				<Route path="/generator/:genre" element={<Generator />} />
+				<Route path="*" element={<NotFound />} />
+			</Routes>
+		</Router>
 	);
 }
 

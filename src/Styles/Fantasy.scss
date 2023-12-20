@@ -1,0 +1,29 @@
+@import "./variables";
+@import "./mixins";
+
+.Fantasy {
+    @include background;
+    background-image: url("../../public/images/fantasy-bg.jpg");
+    color: $fantasy-color-tuna;
+    main {
+        @include window;
+        background-color: $fantasy-color-deluge-transparency;
+        div {
+            @include container-names;
+            div {
+                @include names;
+                background-color: $fantasy-color-glacier-transparency;
+            }
+        }
+        button {
+            @include button;
+            background-image: $fantasy-color-button;
+            &:hover {
+                background-image: $fantasy-color-button-hover;
+            }
+        }
+    }
+    footer {
+        color: $fantasy-color-old-rose;
+    }
+}
