@@ -2,6 +2,7 @@
   "name": "namegenerator",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://alicjalysien.github.io/names-generator",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
     "@testing-library/jest-dom": "^5.17.0",
@@ -26,7 +27,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.{ts,tsx}",
-    "lint-fix": "eslint src/**/*.{ts,tsx} --fix"
+    "lint-fix": "eslint src/**/*.{ts,tsx} --fix",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +51,7 @@
   },
   "devDependencies": {
     "eslint": "^8.55.0",
-    "eslint-plugin-react": "^7.33.2"
+    "eslint-plugin-react": "^7.33.2",
+    "gh-pages": "^6.1.0"
   }
 }

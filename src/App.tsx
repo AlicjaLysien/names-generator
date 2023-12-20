@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import {HashRouter as Router, Routes, Route} from "react-router-dom";
 import {useEffect} from "react";
 import {useDispatch} from "react-redux";
 import {generateNames} from "./Store/generator";
@@ -11,7 +11,6 @@ function App() {
 	useEffect(() => {
 		dispatch(generateNames({genre: "fantasy"}));
 		dispatch(generateNames({genre: "japanese"}));
-		//return () => {dispatch(cleanDetails())}
 	}, []);
 	
 	return (
