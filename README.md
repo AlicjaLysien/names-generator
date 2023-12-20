@@ -20,4 +20,5 @@ To run the project locally use **npm run start**.
 
 ### Design
 The colors were created by [canva palette generator](https://www.canva.com/colors/color-palette-generator/)
+
 ![Image - fantasy palette](/public/images/fantasy-bg-palette.jpg) ![Image - japanese palette](/public/images/japanese-bg-palette.jpg)
