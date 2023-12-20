@@ -5,9 +5,33 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+h1 {
+  padding: 16px 0px;
+}
+
+h4 {
+  padding: 10px 0px;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  text-transform: uppercase;
+  margin: 6px;
+}
+
+button:hover {
+  cursor: pointer;
 }

@@ -5,7 +5,8 @@ type Generator = {
     parts: {
         japanese: Parts,
         fantasy: Parts
-    }
+    },
+    numberOfNames: number,
 } & Name
 
 export default Generator;

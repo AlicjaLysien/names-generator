@@ -1,5 +1,10 @@
+export type ArrayWithNames = [string, string, string];
+
 type Name = {
-    generatedNames: [string, string, string] | [];
+    generatedNames: {
+      fantasy: ArrayWithNames | [],
+      japanese: ArrayWithNames | []
+    }
   }
 
 export default Name;
