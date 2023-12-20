@@ -25,7 +25,6 @@ export const slice = createSlice({
 		generateNames: (state: Generator, action: PayloadAction<{ genre: Genre }>) => {
 			for(let i = 0; i < state.numberOfNames; i++){
 				const numberOfParts: number = Math.floor(Math.random() * (2) + 2);
-				console.log(numberOfParts);
 				const usedParts: Parts = (action.payload.genre === "fantasy" && state.parts.fantasy) || (state.parts.japanese);
 				const partFirst: string = usedParts[0][Math.floor(Math.random() * (usedParts[0].length - 1))];
 				const partSecond: string = usedParts[1][Math.floor(Math.random() * (usedParts[1].length - 1))];
