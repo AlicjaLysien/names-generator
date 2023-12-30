@@ -9,6 +9,7 @@ import NotFound from "./Pages/NotFound";
 function App() {
 	const dispatch = useDispatch();
 	useEffect(() => {
+		dispatch(generateNames({genre: "chinese"}));
 		dispatch(generateNames({genre: "fantasy"}));
 		dispatch(generateNames({genre: "japanese"}));
 	}, []);

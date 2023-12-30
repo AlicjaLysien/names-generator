@@ -12,6 +12,9 @@ function Main() {
 			<Link to="/generator/japanese">
 				<button>japanese</button>
 			</Link>
+			<Link to="/generator/chinese">
+				<button>chinese</button>
+			</Link>
 		</div>
 	);
 }
