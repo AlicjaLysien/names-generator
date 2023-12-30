@@ -1,0 +1,29 @@
+@import "./variables";
+@import "./mixins";
+
+.Chinese {
+    @include background;
+    background-image: url("../../public/images/chinese-bg.jpg");
+    color: $chinese-color-rhino;
+    main {
+        @include window;
+        background-color: $chinese-color-zorba-transparency;
+        div {
+            @include container-names;
+            div {
+                @include names;
+                background-color: $chinese-color-fawn-transparency;
+            }
+        }
+        button {
+            @include button;
+            background-image: $chinese-color-button;
+            &:hover {
+                background-image: $chinese-color-button-hover;
+            }
+        }
+    }
+    footer {
+        color: $chinese-color-rhino;
+    }
+}
