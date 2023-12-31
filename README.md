@@ -27,6 +27,10 @@ npm run start
 
 ![Image - preview of my page](/public/images/readme-example.png)
 
+## 🔮 Names
+
+### 🍜 Chinese
+Chinese names are generated based on first 1000 Hanzi characters from: [https://en.wiktionary.org](https://en.wiktionary.org/wiki/Appendix:Table_of_General_Standard_Chinese_Characters)
 
 ## 🎨 Design
 The colors were created by [canva palette generator](https://www.canva.com/colors/color-palette-generator/)
