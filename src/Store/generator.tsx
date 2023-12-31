@@ -27,27 +27,40 @@ export const slice = createSlice({
 	reducers: {
 		generateNames: (state: Generator, action: PayloadAction<{ genre: Genre }>) => {
 			for(let i = 0; i < state.numberOfNames; i++){
-				const numberOfParts: number = Math.floor(Math.random() * (2) + 2);
+				const numberOfParts: number = action.payload.genre == "chinese" ? Math.floor(Math.random() * 4) + 1 : Math.floor(Math.random() * 2) + 2;
 				const usedParts: Parts = 
 					(action.payload.genre === "chinese" && state.parts.chinese) ||
 					(action.payload.genre === "fantasy" && state.parts.fantasy) ||
 					(state.parts.japanese);
+				let createdName: string;
 				const partFirst: string = usedParts[0][Math.floor(Math.random() * (usedParts[0].length - 1))];
-				const partSecond: string = usedParts[1][Math.floor(Math.random() * (usedParts[1].length - 1))];
-				let createdName: string =  partFirst.charAt(0).toUpperCase() + partFirst.slice(1) + partSecond;
-				if(numberOfParts === 3){
-					if(action.payload.genre === ("fantasy" || "chinese")) {
-						const partThird: string = usedParts[2][Math.floor(Math.random() * (usedParts[2].length - 1))];
+				if (!(action.payload.genre === "chinese")) {
+					const partSecond: string = usedParts[1][Math.floor(Math.random() * (usedParts[1].length - 1))];
+					createdName = partFirst.charAt(0).toUpperCase() + partFirst.slice(1) + partSecond;
+					if(numberOfParts === 3){
+						if(action.payload.genre === "fantasy") {
+							const partThird: string = usedParts[2][Math.floor(Math.random() * (usedParts[2].length - 1))];
+							createdName = createdName + partThird;
+						}
+						if(action.payload.genre === "japanese") {
+							const partThird: string = usedParts[1][Math.floor(Math.random() * (usedParts[1].length - 1))];
+							createdName = createdName + partThird;
+						}
+					} 
+					if(action.payload.genre === "fantasy") state.generatedNames.fantasy[i] = createdName;
+					if(action.payload.genre === "japanese") state.generatedNames.japanese[i] = createdName;
+				} else {
+					createdName = partFirst;
+					if(numberOfParts >= 2 ) {
+						const partSecond: string = usedParts[0][Math.floor(Math.random() * (usedParts[0].length - 1))];
+						createdName = createdName + partSecond;
+					}
+					if(numberOfParts === 3) {
+						const partThird: string = usedParts[0][Math.floor(Math.random() * (usedParts[0].length - 1))];
 						createdName = createdName + partThird;
 					}
-					if(action.payload.genre === "japanese") {
-						const partThird: string = usedParts[1][Math.floor(Math.random() * (usedParts[1].length - 1))];
-						createdName = createdName + partThird;
-					}
+					state.generatedNames.chinese[i] = createdName;
 				}
-				if(action.payload.genre === "chinese") state.generatedNames.chinese[i] = createdName;
-				if(action.payload.genre === "fantasy") state.generatedNames.fantasy[i] = createdName;
-				if(action.payload.genre === "japanese") state.generatedNames.japanese[i] = createdName;
 			}
 		}
 	}
