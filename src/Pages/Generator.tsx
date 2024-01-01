@@ -1,7 +1,7 @@
 import {useEffect} from "react";
 import {useParams, useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {generateNames, generatedNamesChinese, generatedNamesFantasy, generatedNamesJapanese, numberOfNames as number} from "../Store/generator";
+import {generateNames, generatedNamesChinese, generatedNamesChinesePinyin, generatedNamesFantasy, generatedNamesJapanese, numberOfNames as number} from "../Store/generator";
 import Genre, {isGenre} from "../Types/Genre";
 import {ArrayWithNames} from "../Types/Name";
 import "../Styles/Chinese.scss";
@@ -21,6 +21,7 @@ function Generator() {
 	const dispatch = useDispatch();
 
 	const chineseNames: ArrayWithNames | [] = useSelector(generatedNamesChinese);
+	const chineseNamesPinyin: ArrayWithNames | [] = useSelector(generatedNamesChinesePinyin);
 	const fantasyNames: ArrayWithNames | [] = useSelector(generatedNamesFantasy);
 	const japaneseNames: ArrayWithNames | [] = useSelector(generatedNamesJapanese);
 	const numberOfNames: number = useSelector(number);
@@ -37,7 +38,12 @@ function Generator() {
 		const usedNames: ArrayWithNames | [] = (genre === "chinese" && chineseNames) ||
 					(genre === "fantasy" && fantasyNames) || (japaneseNames);
 		for(let i = 0; i < numberOfNames; i++){
-			divs.push(<div key={i}>{usedNames[i]}</div>);
+			divs.push(
+				<div key={i}>
+					{usedNames[i]}
+					{genre === "chinese" && <> - {chineseNamesPinyin[i]}</>}
+				</div>
+			);
 		}
 		return divs;
 	};

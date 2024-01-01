@@ -6,10 +6,12 @@ import chinese from "../Types/chinese";
 import fantasy from "../Types/fantasy";
 import japanese from "../Types/japanese";
 import {ArrayWithNames} from "../Types/Name";
+import {pinyin} from "pinyin-pro";
 
 const initialState: Generator = {
 	generatedNames: {
 		chinese: [],
+		chinesePinyin: [],
 		fantasy: [],
 		japanese: []
 	},
@@ -62,6 +64,13 @@ export const slice = createSlice({
 					state.generatedNames.chinese[i] = createdName;
 				}
 			}
+			if(action.payload.genre === "chinese")
+			{
+				for(let i = 0; i < state.numberOfNames; i++){
+					state.generatedNames.chinesePinyin[i] =
+					pinyin(state.generatedNames.chinese[i], {toneType: "none"}).replace(/\s+/g, "");
+				}
+			}
 		}
 	}
 });
@@ -73,6 +82,7 @@ type State = {
 }
 
 export const generatedNamesChinese = (state: State): [] | ArrayWithNames => state.generator.generatedNames.chinese;
+export const generatedNamesChinesePinyin = (state: State): [] | ArrayWithNames => state.generator.generatedNames.chinesePinyin;
 export const generatedNamesFantasy = (state: State): [] | ArrayWithNames => state.generator.generatedNames.fantasy;
 export const generatedNamesJapanese = (state: State): [] | ArrayWithNames => state.generator.generatedNames.japanese;
 export const numberOfNames = (state: State): number => state.generator.numberOfNames;

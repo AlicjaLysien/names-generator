@@ -30,7 +30,8 @@ npm run start
 ## 🔮 Names
 
 ### 🍜 Chinese
-Chinese names are generated based on first 1000 Hanzi characters from: [https://en.wiktionary.org](https://en.wiktionary.org/wiki/Appendix:Table_of_General_Standard_Chinese_Characters)
+Chinese names are generated based on first 1000 Hanzi characters from: [https://en.wiktionary.org](https://en.wiktionary.org/wiki/Appendix:Table_of_General_Standard_Chinese_Characters).
+Transliteration from hanzi to pinyin is managed by [pinyin-pro package](https://www.npmjs.com/package/pinyin-pro).
 
 ## 🎨 Design
 The colors were created by [canva palette generator](https://www.canva.com/colors/color-palette-generator/)
