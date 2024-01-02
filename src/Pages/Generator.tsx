@@ -20,10 +20,10 @@ function Generator() {
 
 	const dispatch = useDispatch();
 
-	const chineseNames: ArrayWithNames | [] = useSelector(generatedNamesChinese);
-	const chineseNamesPinyin: ArrayWithNames | [] = useSelector(generatedNamesChinesePinyin);
-	const fantasyNames: ArrayWithNames | [] = useSelector(generatedNamesFantasy);
-	const japaneseNames: ArrayWithNames | [] = useSelector(generatedNamesJapanese);
+	const namesChinese: ArrayWithNames | [] = useSelector(generatedNamesChinese);
+	const namesChinesePinyin: ArrayWithNames | [] = useSelector(generatedNamesChinesePinyin);
+	const namesFantasy: ArrayWithNames | [] = useSelector(generatedNamesFantasy);
+	const namesJapanese: ArrayWithNames | [] = useSelector(generatedNamesJapanese);
 	const numberOfNames: number = useSelector(number);
 
 	const imageUrl = {
@@ -35,13 +35,13 @@ function Generator() {
 
 	const createDivs = (): JSX.Element[] => {
 		const divs: JSX.Element[] = [];
-		const usedNames: ArrayWithNames | [] = (genre === "chinese" && chineseNames) ||
-					(genre === "fantasy" && fantasyNames) || (japaneseNames);
+		const usedNames: ArrayWithNames | [] = (genre === "chinese" && namesChinese) ||
+					(genre === "fantasy" && namesFantasy) || (namesJapanese);
 		for(let i = 0; i < numberOfNames; i++){
 			divs.push(
 				<div key={i}>
 					{usedNames[i]}
-					{genre === "chinese" && <> - {chineseNamesPinyin[i]}</>}
+					{genre === "chinese" && <> - {namesChinesePinyin[i]}</>}
 				</div>
 			);
 		}
