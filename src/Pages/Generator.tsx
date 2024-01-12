@@ -7,6 +7,7 @@ import {ArrayWithNames} from "../Types/Name";
 import "../Styles/Chinese.scss";
 import "../Styles/Fantasy.scss";
 import "../Styles/Japanese.scss";
+import Menu from "../Components/Menu";
 
 function Generator() {
 	const params = useParams();
@@ -50,6 +51,7 @@ function Generator() {
 
 	return (
 		<div className={className}>
+			<Menu />
 			<main>
 				<h1>{className} generator</h1>
 				<button onClick={() => dispatch(generateNames({genre: genre as Genre}))}>generate</button>

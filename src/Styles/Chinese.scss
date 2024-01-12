@@ -18,15 +18,26 @@
                 background-color: $chinese-color-fawn-transparency;
             }
         }
-        button {
-            @include button;
-            background-image: $chinese-color-button;
-            &:hover {
-                background-image: $chinese-color-button-hover;
-            }
+    }
+    button {
+        @include button;
+        background-image: $chinese-color-button;
+        &:hover {
+            background-image: $chinese-color-button-hover;
         }
     }
     footer {
         color: $chinese-color-rhino;
+    }
+    .Menu {
+        background-color: $chinese-color-zorba-transparency;
+        button {
+            @include button-menu;
+        }
+        a.active {
+            button {
+                background-image: $chinese-color-button-hover;
+            }
+        }
     }
 }
