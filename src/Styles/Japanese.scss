@@ -8,6 +8,9 @@
     main {
         @include window;
         background-color: $japanese-color-scorpion-transparency;
+        h1 {
+            color: $japanese-color-colar-reef;
+        }
         div {
             @include container-names;
             div {
@@ -15,10 +18,24 @@
                 background-color: $japanese-color-colar-reef-transparency;
             }
         }
+    }
+    button {
+        @include button;
+        background-image: $japanese-color-button;
+        &:hover {
+            background-image: $japanese-color-button-hover;
+        }
+    }
+    footer {
+        color: $chinese-color-rhino;
+    }
+    .Menu {
+        background-color: $japanese-color-scorpion-transparency;
         button {
-            @include button;
-            background-image: $japanese-color-button;
-            &:hover {
+            @include button-menu;
+        }
+        a.active {
+            button {
                 background-image: $japanese-color-button-hover;
             }
         }

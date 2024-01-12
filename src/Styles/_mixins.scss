@@ -27,6 +27,12 @@
     align-self: center;
 }
 
+@mixin button-menu {
+    width: auto;
+    padding: 8px 18px;
+    font-size: 18px;
+}
+
 @mixin container-names {
     display: flex;
     flex-direction: column;
