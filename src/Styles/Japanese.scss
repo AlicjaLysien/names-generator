@@ -5,6 +5,9 @@
     @include background;
     background-image: url("../../public/images/japanese-bg.jpg");
     color: $japanese-color-matterborn;
+    @media (max-width: 460px) {
+        background-position-x: 0px;
+    }
     main {
         @include window;
         background-color: $japanese-color-scorpion-transparency;
