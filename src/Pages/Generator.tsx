@@ -33,7 +33,6 @@ function Generator() {
 		japanese: "https://www.sportskeeda.com/anime/my-happy-marriage-everything-know-miyo-saimori-dream-sight-ability"
 	};
 
-
 	const createDivs = (): JSX.Element[] => {
 		const divs: JSX.Element[] = [];
 		const usedNames: ArrayWithNames | [] = (genre === "chinese" && namesChinese) ||

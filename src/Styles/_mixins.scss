@@ -16,8 +16,8 @@
     padding: 20px 14px 40px;
     margin: auto;
     border-radius: 12px;
-    @media (max-width: 500px) {
-        margin: 0 20px;
+    @media (max-width: 460px) {
+        width: auto;
     }
 }
 
@@ -25,6 +25,9 @@
     width: 200px;
     font-size: $font-size-medium;
     align-self: center;
+    @media (max-width: 200px) {
+        width: auto;
+    }
 }
 
 @mixin button-menu {
@@ -47,4 +50,10 @@
     font-size: $font-size-large;
     line-height: 1;
     border-radius: 10px;
+}
+
+@mixin footer {
+    @media (max-width: 460px) {
+        font-size: 14px;
+    }
 }
