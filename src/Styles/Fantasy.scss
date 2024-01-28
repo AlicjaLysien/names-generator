@@ -27,6 +27,7 @@
         }
     }
     footer {
+        @include footer;
         color: $fantasy-color-old-rose;
     }
     .Menu {
