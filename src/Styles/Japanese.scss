@@ -22,8 +22,9 @@
             }
         }
     }
-    button {
+    button, a {
         @include button;
+        color: $japanese-color-matterborn;
         background-image: $japanese-color-button;
         &:hover {
             background-image: $japanese-color-button-hover;
@@ -35,13 +36,11 @@
     }
     .Menu {
         background-color: $japanese-color-scorpion-transparency;
-        button {
+        a {
             @include button-menu;
         }
         a.active {
-            button {
-                background-image: $japanese-color-button-hover;
-            }
+            background-image: $japanese-color-button-hover;
         }
     }
 }

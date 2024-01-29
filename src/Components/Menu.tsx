@@ -5,13 +5,13 @@ function Menu() {
 	return (
 		<div className="Menu">
 			<NavLink to="/generator/fantasy">
-				<button>fantasy</button>
+				fantasy
 			</NavLink>
 			<NavLink to="/generator/japanese">
-				<button>japanese</button>
+				japanese
 			</NavLink>
 			<NavLink to="/generator/chinese">
-				<button>chinese</button>
+				chinese
 			</NavLink>
 		</div>
 	);
