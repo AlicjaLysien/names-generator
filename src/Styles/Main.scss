@@ -13,7 +13,7 @@
   h4 {
     font-size: $font-size-medium;
   }
-  button {
+  button, a {
     color: $main-page-button-text;
     background-image: $main-page-button-bg;
     font-size: $font-size-medium;
@@ -23,5 +23,9 @@
   }
   .Menu {
     background-color: transparent;
+    @media (max-width: 460px) {
+        display: grid;
+        margin: 0px 20px;
+    }
   }
 }

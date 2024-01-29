@@ -19,8 +19,9 @@
             }
         }
     }
-    button {
+    button, a {
         @include button;
+        color: $chinese-color-zorba;
         background-image: $chinese-color-button;
         &:hover {
             background-image: $chinese-color-button-hover;
@@ -32,13 +33,11 @@
     }
     .Menu {
         background-color: $chinese-color-zorba-transparency;
-        button {
+        a {
             @include button-menu;
         }
         a.active {
-            button {
-                background-image: $chinese-color-button-hover;
-            }
+            background-image: $chinese-color-button-hover;
         }
     }
 }

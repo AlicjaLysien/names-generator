@@ -24,12 +24,13 @@ h4 {
   padding: 10px 0px;
 }
 
-button {
+button, a {
   padding: 10px 16px;
   border: none;
   border-radius: 6px;
   text-transform: uppercase;
   margin: 6px;
+  text-decoration: none;
 }
 
 button:hover {

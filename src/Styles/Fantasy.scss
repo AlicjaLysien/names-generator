@@ -5,6 +5,9 @@
     @include background;
     background-image: url("../../public/images/fantasy-bg.jpg");
     color: $fantasy-color-tuna;
+    @media (max-width: 460px) {
+        background-position-x: 0px;
+    }
     main {
         @include window;
         background-color: $fantasy-color-deluge-transparency;
@@ -19,8 +22,9 @@
             }
         }
     }
-    button {
+    button, a {
         @include button;
+        color: $fantasy-color-tuna;
         background-image: $fantasy-color-button;
         &:hover {
             background-image: $fantasy-color-button-hover;
@@ -32,13 +36,11 @@
     }
     .Menu {
         background-color: $fantasy-color-deluge-transparency;
-        button {
+        a {
             @include button-menu;
         }
         a.active {
-            button {
-                background-image: $fantasy-color-button-hover;
-            }
+            background-image: $fantasy-color-button-hover;
         }
     }
 }
