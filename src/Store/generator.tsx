@@ -2,9 +2,9 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import Generator from "../Types/Generator";
 import Parts from "../Types/Parts";
 import Genre from "../Types/Genre";
-import chinese from "../Types/chinese";
-import fantasy from "../Types/fantasy";
-import japanese from "../Types/japanese";
+import chinese from "../Utils/chinese";
+import fantasy from "../Utils/fantasy";
+import japanese from "../Utils/japanese";
 import {ArrayWithNames} from "../Types/Name";
 import {pinyin} from "pinyin-pro";
 
