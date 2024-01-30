@@ -1,4 +1,4 @@
-import Parts from "./Parts";
+import Parts from "../Types/Parts";
 
 const japanese: Parts = [
 	[
