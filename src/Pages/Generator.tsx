@@ -8,6 +8,8 @@ import "../Styles/Chinese.scss";
 import "../Styles/Fantasy.scss";
 import "../Styles/Japanese.scss";
 import Menu from "../Components/Menu";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faHeartCirclePlus} from "@fortawesome/free-solid-svg-icons";
 
 function Generator() {
 	const params = useParams();
@@ -42,6 +44,9 @@ function Generator() {
 				<div key={i}>
 					{usedNames[i]}
 					{genre === "chinese" && <> - {namesChinesePinyin[i]}</>}
+					<span>
+						<FontAwesomeIcon icon={faHeartCirclePlus} />
+					</span>
 				</div>
 			);
 		}

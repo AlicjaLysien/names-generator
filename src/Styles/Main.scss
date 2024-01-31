@@ -23,7 +23,7 @@
   }
   .Menu {
     background-color: transparent;
-    @media (max-width: 460px) {
+    @media (max-width: $screen-breakpoint) {
         display: grid;
         margin: 0px 20px;
     }

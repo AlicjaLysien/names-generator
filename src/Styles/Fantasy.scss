@@ -5,7 +5,7 @@
     @include background;
     background-image: url("../../public/images/fantasy-bg.jpg");
     color: $fantasy-color-tuna;
-    @media (max-width: 460px) {
+    @media (max-width: $screen-breakpoint) {
         background-position-x: 0px;
     }
     main {
@@ -19,6 +19,15 @@
             div {
                 @include names;
                 background-color: $fantasy-color-glacier-transparency;
+                span {
+                    &:hover svg {
+                        color: $fantasy-color-tuna-transparency;
+                    }
+                    &:before {
+                        background-color: $fantasy-color-deluge;
+                        border-color: $fantasy-color-tuna;
+                    }
+                }
             }
         }
     }

@@ -5,7 +5,7 @@
     @include background;
     background-image: url("../../public/images/japanese-bg.jpg");
     color: $japanese-color-matterborn;
-    @media (max-width: 460px) {
+    @media (max-width: $screen-breakpoint) {
         background-position-x: 0px;
     }
     main {
@@ -19,6 +19,15 @@
             div {
                 @include names;
                 background-color: $japanese-color-colar-reef-transparency;
+                span {
+                    &:hover svg {
+                        color: $japanese-color-matterborn-transparency;
+                    }
+                    &:before {
+                        background-color: $japanese-color-colar-reef;
+                        border-color: $japanese-color-matterborn;
+                    }
+                }
             }
         }
     }

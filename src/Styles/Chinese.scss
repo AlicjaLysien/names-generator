@@ -16,6 +16,18 @@
                 font-weight: 600;
                 font-family: 'Noto Serif SC', serif;
                 background-color: $chinese-color-fawn-transparency;
+                @media (max-width: $screen-breakpoint) {
+                    padding: 12px 46px;
+                }
+                span {
+                    &:hover svg {
+                        color: $chinese-color-rhino-transparency;
+                    }
+                    &:before {
+                        background-color: $chinese-color-zorba;
+                        border-color: $chinese-color-rhino;
+                    }
+                }
             }
         }
     }

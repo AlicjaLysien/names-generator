@@ -16,8 +16,13 @@
     padding: 20px 14px 40px;
     margin: auto;
     border-radius: 12px;
-    @media (max-width: 460px) {
+    @media (max-width: $screen-breakpoint) {
         width: auto;
+        margin: auto 16px;
+        padding: 0px 14px 16px;
+        h1 {
+            font-size: $font-size-large-mobile;
+        }
     }
 }
 
@@ -45,16 +50,46 @@
 }
 
 @mixin names {
+    position: relative;
     margin: 0;
     padding: 10px 12px;
-    height: $font-size-large;
     font-size: $font-size-large;
     line-height: 1;
     border-radius: 10px;
+    span {
+        position: absolute;
+        right: 10px;
+        &:hover {
+            cursor: pointer;
+            &:before {
+                display: block;
+            }
+        }
+        &:before {
+            content: "Add to favourite";
+            position: absolute;
+            bottom: 32px;
+            display: none;
+            left: 38px;
+            bottom: 50%;
+            transform: translate(0, 50%);
+            font-size: $font-size-small;
+            font-weight: bold;
+            padding: 6px 14px;
+            border-radius: 6px;
+            border-width: 2px;
+            border-style: solid;
+            @media (max-width: calc($screen-breakpoint + 70px)) {
+                left: 50%;
+                bottom: 36px;
+                transform: translate(-50%, 0);
+            }
+        }
+    }
 }
 
 @mixin footer {
-    @media (max-width: 460px) {
+    @media (max-width: $screen-breakpoint) {
         font-size: 14px;
     }
 }
