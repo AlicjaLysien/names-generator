@@ -56,7 +56,8 @@
     font-size: $font-size-large;
     line-height: 1;
     border-radius: 10px;
-    span {
+    gap: 0px;
+    span.heart-icon {
         position: absolute;
         right: 10px;
         &:hover {
