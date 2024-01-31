@@ -42,9 +42,11 @@ function Generator() {
 		for(let i = 0; i < numberOfNames; i++){
 			divs.push(
 				<div key={i}>
-					{usedNames[i]}
-					{genre === "chinese" && <> - {namesChinesePinyin[i]}</>}
-					<span>
+					<span className={genre === "chinese" ? "hanzi" : ""}>
+						{usedNames[i]}
+					</span>
+					{genre === "chinese" && <span>{namesChinesePinyin[i]}</span>}
+					<span className="heart-icon">
 						<FontAwesomeIcon icon={faHeartCirclePlus} />
 					</span>
 				</div>

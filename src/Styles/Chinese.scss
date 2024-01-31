@@ -1,6 +1,5 @@
 @import "./variables";
 @import "./mixins";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600&family=Parisienne&family=Raleway&display=swap');
 
 .Chinese {
     @include background;
@@ -13,8 +12,6 @@
             @include container-names;
             div {
                 @include names;
-                font-weight: 600;
-                font-family: 'Noto Serif SC', serif;
                 background-color: $chinese-color-fawn-transparency;
                 @media (max-width: $screen-breakpoint) {
                     padding: 12px 46px;
