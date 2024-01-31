@@ -14,7 +14,8 @@
                 @include names;
                 background-color: $chinese-color-fawn-transparency;
                 @media (max-width: $screen-breakpoint) {
-                    padding: 12px 46px;
+                    font-size: $font-size-medium;
+                    font-weight: bold;
                 }
                 span {
                     &:hover svg {
