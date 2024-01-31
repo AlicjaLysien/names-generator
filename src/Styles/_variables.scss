@@ -1,5 +1,9 @@
 $font-size-large: 32px;
+$font-size-large-mobile: 24px;
 $font-size-medium: 20px;
+$font-size-small: 16px;
+
+$screen-breakpoint: 500px;
 
 $main-page-bg: #4F7D95;
 $main-page-white: #EEFBFF;
@@ -20,6 +24,7 @@ $fantasy-color-button-hover: linear-gradient(0deg, rgba(112,111,174,1) 0%, rgb(1
 $japanese-color-colar-reef: #CCB8A9;
 $japanese-color-colar-reef-transparency: rgb(204, 184, 168, 0.4);
 $japanese-color-matterborn: #453544;
+$japanese-color-matterborn-transparency: rgb(69, 53, 68, 0.6);
 $japanese-color-dingley: #758043;
 $japanese-color-dingley-transparency: rgb(116, 127, 67, 0.6);
 $japanese-color-scorpion: #605D60;
@@ -30,6 +35,7 @@ $japanese-color-button-hover: linear-gradient(0deg, rgba(117,128,67,1) 0%,rgb(21
 $chinese-color-zorba: #9D9788;
 $chinese-color-zorba-transparency: rgb(157, 151, 136, 0.6);
 $chinese-color-rhino: #2F385A;
+$chinese-color-rhino-transparency: rgb(47, 56, 90, 0.6);
 $chinese-color-voodoo: #513D58;
 $chinese-color-fawn: #6E5237;
 $chinese-color-fawn-transparency: rgb(110, 82, 55, 0.6);
