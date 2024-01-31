@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/names-generator/static/css/main.1c482230.css",
-    "main.js": "/names-generator/static/js/main.1137e08a.js",
+    "main.css": "/names-generator/static/css/main.24bea8ba.css",
+    "main.js": "/names-generator/static/js/main.075b02dc.js",
     "static/js/787.2b4d310c.chunk.js": "/names-generator/static/js/787.2b4d310c.chunk.js",
     "static/media/chinese-bg.jpg": "/names-generator/static/media/chinese-bg.7ed055867bb80a960e35.jpg",
     "static/media/fantasy-bg.jpg": "/names-generator/static/media/fantasy-bg.778688571c668291fcb4.jpg",
     "static/media/japanese-bg.jpg": "/names-generator/static/media/japanese-bg.90a84360e82d3b794134.jpg",
     "index.html": "/names-generator/index.html",
-    "main.1c482230.css.map": "/names-generator/static/css/main.1c482230.css.map",
-    "main.1137e08a.js.map": "/names-generator/static/js/main.1137e08a.js.map",
+    "main.24bea8ba.css.map": "/names-generator/static/css/main.24bea8ba.css.map",
+    "main.075b02dc.js.map": "/names-generator/static/js/main.075b02dc.js.map",
     "787.2b4d310c.chunk.js.map": "/names-generator/static/js/787.2b4d310c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1c482230.css",
-    "static/js/main.1137e08a.js"
+    "static/css/main.24bea8ba.css",
+    "static/js/main.075b02dc.js"
   ]
 }
