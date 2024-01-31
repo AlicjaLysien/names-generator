@@ -2,7 +2,7 @@ import {useEffect} from "react";
 import {useParams, useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {generateNames, generatedNamesChinese, generatedNamesChinesePinyin, generatedNamesFantasy, generatedNamesJapanese, numberOfNames as number} from "../Store/generator";
-import Genre, {isGenre} from "../Types/Genre";
+import Genre, {genres} from "../Types/Genre";
 import {ArrayWithNames} from "../Types/Name";
 import "../Styles/Chinese.scss";
 import "../Styles/Fantasy.scss";
@@ -16,7 +16,7 @@ function Generator() {
 	const navigate  = useNavigate();
 
 	useEffect(() => {
-		if(!isGenre(genre)) navigate("/");
+		if(!(genres as ReadonlyArray<string>).includes(genre)) navigate("/");
 	}, [genre]);
 
 	const dispatch = useDispatch();
