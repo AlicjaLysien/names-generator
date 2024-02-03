@@ -57,9 +57,15 @@
     line-height: 1;
     border-radius: 10px;
     gap: 0px;
-    span.heart-icon {
+    button.heart-icon {
         position: absolute;
         right: 10px;
+        background: transparent;
+        font-size: $font-size-large;
+        text-transform: none;
+        width: auto;
+        padding: 0;
+        margin: 0;
         &:hover {
             cursor: pointer;
             &:before {

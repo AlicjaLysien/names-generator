@@ -8,7 +8,7 @@ export const slice = createSlice({
 	initialState,
 	reducers: {	
 		addName: (state: Favourite, action: PayloadAction<{ name: string }>) : void => {
-			state = [...state, action.payload.name];
+			state.push(action.payload.name);
 		},
 		removeName: (state: Favourite, action: PayloadAction<{ name: string }>) : void => {
 			state = state.filter(name => name !== action.payload.name);

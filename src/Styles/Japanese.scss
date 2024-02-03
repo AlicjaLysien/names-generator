@@ -19,7 +19,7 @@
             div {
                 @include names;
                 background-color: $japanese-color-colar-reef-transparency;
-                span {
+                button.heart-icon {
                     &:hover svg {
                         color: $japanese-color-matterborn-transparency;
                     }
