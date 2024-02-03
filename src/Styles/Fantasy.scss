@@ -19,7 +19,7 @@
             div {
                 @include names;
                 background-color: $fantasy-color-glacier-transparency;
-                span {
+                button.heart-icon {
                     &:hover svg {
                         color: $fantasy-color-tuna-transparency;
                     }

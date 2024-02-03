@@ -2,6 +2,7 @@ import {useEffect} from "react";
 import {useParams, useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {generateNames, generatedNamesChinese, generatedNamesChinesePinyin, generatedNamesFantasy, generatedNamesJapanese, numberOfNames as number} from "../Store/generator";
+import {addName} from "../Store/favourite";
 import Genre, {genres} from "../Types/Genre";
 import {ArrayWithNames} from "../Types/Name";
 import "../Styles/Chinese.scss";
@@ -40,15 +41,20 @@ function Generator() {
 		const usedNames: ArrayWithNames | [] = (genre === "chinese" && namesChinese) ||
 					(genre === "fantasy" && namesFantasy) || (namesJapanese);
 		for(let i = 0; i < numberOfNames; i++){
+			const key = genre === "chinese" ? namesChinesePinyin[i] : usedNames[i];
 			divs.push(
-				<div key={i}>
+				<div key={`${key}-${i}`}>
 					<span className={genre === "chinese" ? "hanzi" : ""}>
 						{usedNames[i]}
 					</span>
 					{genre === "chinese" && <span>{namesChinesePinyin[i]}</span>}
-					<span className="heart-icon">
-						<FontAwesomeIcon icon={faHeartCirclePlus} />
-					</span>
+					<button 
+						className="heart-icon"
+						onClick={() => dispatch(addName({name: usedNames[i] as string}))}>
+						<FontAwesomeIcon 
+							icon={faHeartCirclePlus}
+						/>
+					</button>
 				</div>
 			);
 		}
