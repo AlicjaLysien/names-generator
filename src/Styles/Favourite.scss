@@ -1,0 +1,16 @@
+@import "./variables";
+@import "./mixins";
+
+.Favourite {
+    main {
+        @include window;
+        div {
+            @include container-names;
+            div {
+                @include names;
+                background-color: $favourite-name-bg;
+                color: $favourite-text;
+            }
+        }
+    }
+}

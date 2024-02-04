@@ -1,7 +1,8 @@
 import {useSelector} from "react-redux";
 import {favouriteNames} from "../Store/favourite";
-import "../Styles/Main.scss";
 import FavouriteType from "../Types/Favourite";
+import "../Styles/Main.scss";
+import "../Styles/Favourite.scss";
 
 function Favourite() {
 
@@ -9,14 +10,17 @@ function Favourite() {
 	console.log(names);
 	return (
 		<>
-			<div className="Main">
+			<div className="Main Favourite">
 				<h1>Favourite</h1>
-				{names.map((name, index) => 
-					<span key={`${name}-${index}`}>
-						{name}
-					</span>
-					
-				)}
+				<main>
+					<div>
+						{names.map((name, index) => 
+							<div key={`${name}-${index}`}>
+								{name}
+							</div>
+						)}
+					</div>
+				</main>
 			</div>
 		</>
 	);
