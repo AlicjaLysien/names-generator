@@ -49,8 +49,8 @@ function Generator() {
 					</span>
 					{genre === "chinese" && <span>{namesChinesePinyin[i]}</span>}
 					<button 
-						className="heart-icon"
-						onClick={() => dispatch(addName({name: usedNames[i] as string}))}>
+						className="icon"
+						onClick={() => dispatch(addName({name: key as string}))}>
 						<FontAwesomeIcon 
 							icon={faHeartCirclePlus}
 						/>

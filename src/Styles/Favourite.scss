@@ -10,6 +10,12 @@
                 @include names;
                 background-color: $favourite-name-bg;
                 color: $favourite-text;
+                button.icon {                  
+                    &:before {
+                        content: "Remove from favourite";
+                        background-color: $favourite-name-bg;
+                    }
+                }
             }
         }
     }
