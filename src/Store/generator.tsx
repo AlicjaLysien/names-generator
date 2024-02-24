@@ -67,8 +67,8 @@ export const slice = createSlice({
 			if(action.payload.genre === "chinese")
 			{
 				for(let i = 0; i < state.numberOfNames; i++){
-					state.generatedNames.chinesePinyin[i] =
-					pinyin(state.generatedNames.chinese[i], {toneType: "none"}).replace(/\s+/g, "");
+					const pinyinName = pinyin(state.generatedNames.chinese[i], {toneType: "none"}).replace(/\s+/g, "");
+					state.generatedNames.chinesePinyin[i] = pinyinName.charAt(0).toUpperCase() + pinyinName.slice(1);
 				}
 			}
 		}

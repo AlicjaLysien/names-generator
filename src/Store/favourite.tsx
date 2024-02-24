@@ -10,8 +10,8 @@ export const slice = createSlice({
 		addName: (state: Favourite, action: PayloadAction<{ name: string }>) : void => {
 			state.push(action.payload.name);
 		},
-		removeName: (state: Favourite, action: PayloadAction<{ name: string }>) : void => {
-			state = state.filter(name => name !== action.payload.name);
+		removeName: (state: Favourite, action: PayloadAction<{ name: string }>) : Favourite => {
+			return state.filter(name => name !== action.payload.name);
 		}
 	}
 });
